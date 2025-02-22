@@ -1,0 +1,376 @@
+.compression-container {
+  max-width: 1200px;
+  margin: 120px auto 2rem;
+  padding: 0 1rem;
+}
+
+.compression-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.compression-header h1 {
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.compression-header p {
+  color: #666;
+}
+
+.compression-options {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.quality-selector {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.quality-selector select {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.upload-area {
+  background: white;
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  transition: border-color 0.3s ease;
+}
+
+.upload-area:hover {
+  border-color: #007bff;
+}
+
+.upload-label {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.upload-label i {
+  font-size: 3rem;
+  color: #007bff;
+}
+
+.upload-label span {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.file-input {
+  display: none;
+}
+
+.files-preview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.file-preview-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.file-preview-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.file-info {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.file-info p {
+  margin: 0;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.file-info span {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.file-info .savings {
+  color: #28a745;
+  font-weight: bold;
+}
+
+.file-status {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.status-pending {
+  color: #666;
+}
+
+.status-processing {
+  color: #007bff;
+}
+
+.status-completed {
+  color: #28a745;
+}
+
+.status-error {
+  color: #dc3545;
+}
+
+.remove-file {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.compression-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.compress-button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.compress-button:hover {
+  background: #0056b3;
+}
+
+.compress-button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.download-button {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  margin: 0 auto;
+}
+
+.download-button:hover {
+  background: #218838;
+}
+
+.download-button i {
+  font-size: 0.9rem;
+}
+
+.file-limit {
+  display: block;
+  color: #666;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.error-message {
+  background-color: #fff3f3;
+  color: #dc3545;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.files-count {
+  display: block;
+  margin-top: 0.5rem;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.download-all-button {
+  background: #17a2b8;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.download-all-button:hover {
+  background: #138496;
+}
+
+@media (max-width: 768px) {
+  .compression-container {
+    margin: 1rem auto;
+  }
+
+  .quality-selector {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+/* Add these PDF-specific styles to your existing Compression.css */
+
+.pdf-card {
+  min-height: 200px;
+}
+
+.pdf-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  background: #f8f9fa;
+  margin: 1rem;
+  border-radius: 4px;
+}
+
+.pdf-icon i {
+  font-size: 3rem;
+  color: #dc3545;
+}
+
+/* Update file preview card for PDFs */
+.file-preview-card.pdf-card .file-info {
+  border-top: 1px solid #eee;
+}
+
+/* Add these video-specific styles to your existing Compression.css */
+
+.video-card {
+  min-height: 300px;
+}
+
+.video-preview {
+  width: 100%;
+  background: #000;
+  position: relative;
+}
+
+.video-preview video {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+}
+
+.video-details {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #666;
+  margin: 0.5rem 0;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.file-preview-card.video-card .file-info {
+  padding: 1rem;
+}
+
+/* Progress bar for video processing */
+.processing-progress {
+  width: 100%;
+  height: 4px;
+  background: #eee;
+  border-radius: 2px;
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+
+.processing-progress-bar {
+  height: 100%;
+  background: #007bff;
+  transition: width 0.3s ease;
+}
+
+/* Add these audio-specific styles to your existing Compression.css */
+
+.audio-card {
+  min-height: 200px;
+}
+
+.audio-preview {
+  background: #f8f9fa;
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+.audio-preview i {
+  font-size: 2rem;
+  color: #6c757d;
+  margin-bottom: 1rem;
+}
+
+.audio-preview audio {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.audio-details {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #666;
+  margin: 0.5rem 0;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.file-preview-card.audio-card .file-info {
+  padding: 1rem;
+} 
